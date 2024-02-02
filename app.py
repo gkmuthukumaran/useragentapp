@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/ua')
+@app.route('/v1/useragent')
 def welcome():
     user_agent = request.headers.get('User-Agent')
     return f'<h1>Welcome to 2024!</h1><br>User Agent: {user_agent}'
